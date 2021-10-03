@@ -6,6 +6,11 @@
 #
 
 LOCAL_PATH := device/xiaomi/evergreen
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 # A/B
 AB_OTA_PARTITIONS += \
     boot \
@@ -21,16 +26,15 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
-
-PRODUCT_PACKAGES += \
-    bootctrl.mt6833
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    android.hardware.boot@1.0-service \
+    android.hardware.boot@1.0-impl-wrapper.recovery \
+    android.hardware.boot@1.0-impl-wrapper \
+    android.hardware.boot@1.0-impl.recovery \
     bootctrl.mt6833 \
-    libgptutils \
-    libz \
-    libcutils
+    bootctrl.mt6833.recovery
+
+PRODUCT_HOST_PACKAGES += \
+    libandroidicu
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
