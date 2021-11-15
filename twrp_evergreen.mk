@@ -19,7 +19,7 @@ $(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := evergreen
-PRODUCT_NAME := omni_evergreen
+PRODUCT_NAME := twrp_evergreen
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := evergreen
 PRODUCT_MANUFACTURER := xiaomi
