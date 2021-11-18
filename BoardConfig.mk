@@ -28,6 +28,11 @@ TARGET_USES_64_BIT_BINDER := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := evergreen
 
+# Partition
+BOARD_FLASH_BLOCK_SIZE := 131072
+BOARD_CACHEIMAGE_PARTITION_SIZE := 136314880
+BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
+
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
 #BOARD_RECOVERYIMAGE_PARTITION_SIZE := 134217728 # This is the maximum known partition size, but it can be higher, so we just omit it
